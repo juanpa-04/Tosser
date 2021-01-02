@@ -1,5 +1,6 @@
-import {Dice} from './dice'
-import {getMainContainer,appendToParent,clearParent} from './dom'
+import {Dice} from './javascripts/dice'
+import {getMainContainer,appendToParent,clearParent} from './javascripts/dom'
+import './styles/style.css'
 
 
 const button = document.querySelector('.click')
