@@ -1,16 +1,16 @@
 import {Dice} from './javascripts/dice'
 import {getMainContainer,appendToParent,clearParent} from './javascripts/dom'
+import {clickTossHandler} from './javascripts/handlers'
 import './styles/style.css'
 
 
 const button = document.querySelector('.click')
 
+const container = getMainContainer();
 
-button.onclick = () => {
-    render();
-}
+container.onclick = clickTossHandler;
 
-function render() {
+export function render() {
     clearParent(getMainContainer())
     const newDice = Dice(getRand(1,6))
     appendToParent(getMainContainer(),newDice.DOM)

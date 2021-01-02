@@ -38,7 +38,7 @@ function getDotPositions(number) {
 function createDice() {
 
     const newDice  = document.createElement('div');
-    newDice.className = "dice"
+    newDice.className = "dice game"
     return newDice;
   
 }
