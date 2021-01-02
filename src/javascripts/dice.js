@@ -11,15 +11,21 @@ import {clearParent,appendToParent} from './dom'
 export const Dice = (faceValue,type=null) => {
 
     const DOM = createDice();
+    let diceValue = faceValue;
     
     if(type === null) type = createDotFace
     
     const value = (newFace) => {
+        diceValue = newFace;
         changeFace(DOM,newFace,type);
     }
 
+    const getValue = () => {
+        return diceValue;
+    }
+
     if(faceValue !== undefined) value(faceValue)
-    return {DOM,value}
+    return {DOM,value,getValue}
 }
 
 function getDotPositions(number) {

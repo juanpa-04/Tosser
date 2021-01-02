@@ -5,6 +5,8 @@
     box-sizing: border-box;
 }
 
+
+
 :root {
     --size-two: 108px;
     --border-radius:10px;
@@ -14,8 +16,48 @@
 
 body {
     background-color: #eb5661fc;
+
+    margin-top: auto;
     
 }
+
+nav {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+   
+}
+.bar {
+    background-color:white;
+    width: 50px;
+    height: 7px;
+    padding: 0px;
+    margin: 5px;
+   
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+.container {
+   
+
+    display:grid;
+    gap:15px;
+    justify-items: center;
+    width: 20%;
+    grid-template-columns: repeat(3,1fr)
+
+}
+
+
+
 
 .center {
     margin-left: auto;
@@ -23,12 +65,8 @@ body {
   
 }
 
-.container {
-    
-    height: 100%;
-}
-
 .dice {
+ 
 
     padding: 3px;
     display: grid;
@@ -54,4 +92,11 @@ body {
     width: var(--dot-size-2);
     height: var(--dot-size-2);
     border-radius: 50%;
+}
+
+
+@media (max-width:600px) {
+    .container {
+        width:100%;
+    }
 }
