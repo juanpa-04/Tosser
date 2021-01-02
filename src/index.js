@@ -5,22 +5,20 @@ import './styles/style.css'
 
 const button = document.querySelector('.click')
 
-let toggle=false;
+
 button.onclick = () => {
-    toggle = !toggle;
-    render(toggle);
+    render();
 }
 
 function render(toggle) {
     clearParent(getMainContainer())
-    if(toggle){
-        const newDice = Dice(5)
-        appendToParent(getMainContainer(),newDice.DOM)
-    } else {
-        const newDice = Dice(6)
-        appendToParent(getMainContainer(),newDice.DOM)
-    }   
+    const newDice = Dice(getRand(1,6))
+    appendToParent(getMainContainer(),newDice.DOM)
+
     
 }
 
+function  getRand(min,max) {
+    return Math.floor(Math.random()*max + min)
+}
 
