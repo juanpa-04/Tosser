@@ -1,5 +1,5 @@
 import {Dice} from './javascripts/dice'
-import {getMainContainer,appendToParent,clearParent} from './javascripts/dom'
+import {getMainContainer,getCounterDom} from './javascripts/dom'
 import {clickTossHandler} from './javascripts/handlers'
 import {getRand} from './javascripts/random'
 import {Game} from './javascripts/gameObjects'
@@ -17,9 +17,12 @@ const game = Game();
 export function render() {
   
     const currentGame = game.getObjects();
+    const counterDom = getCounterDom();
+    
     currentGame.forEach(die=>die.value(getRand(1,6)));
     const sum = getTotalSum(currentGame);
-    console.log(sum)
+   
+    counterDom.innerHTML = sum;
 }
 
 function getTotalSum(currentGame) {
@@ -27,7 +30,9 @@ function getTotalSum(currentGame) {
 }
 
 (function initialRender()  {
-    game.renderObjects(3)
+    
+
+    game.renderObjects(9)
 
 })()
 

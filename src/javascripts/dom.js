@@ -15,4 +15,8 @@ function getMainContainer() {
     return document.querySelector('.container');
 }
 
-export {clearParent,appendToParent,getMainContainer}
+function getCounterDom() {
+    return document.querySelector('.counter');
+}
+
+export {clearParent,appendToParent,getMainContainer,getCounterDom}
