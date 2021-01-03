@@ -19,4 +19,22 @@ function getCounterDom() {
     return document.querySelector('.counter');
 }
 
-export {clearParent,appendToParent,getMainContainer,getCounterDom}
+function setCounterMargin(margin) {
+
+    const isMedia = window.matchMedia("(max-width:600px)");
+    const counter = getCounterDom();
+
+    
+    if(isMedia.matches) {
+        counter.style.marginTop = margin;
+    } 
+    
+    return;
+}
+
+export {    clearParent,
+            appendToParent,
+            getMainContainer,
+            getCounterDom,
+            setCounterMargin,
+       }
