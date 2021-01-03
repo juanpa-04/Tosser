@@ -27,7 +27,7 @@ function getTotalSum(currentGame) {
 }
 
 (function initialRender()  {
-    game.renderObjects(9)
+    game.renderObjects(3)
 
 })()
 

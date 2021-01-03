@@ -85,7 +85,6 @@ nav {
 }
 
 .dot {
-    grid-area: dot;
     justify-self: center;
     align-self: center;
     background-color: black;
