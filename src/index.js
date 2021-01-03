@@ -1,5 +1,5 @@
 import {Dice} from './javascripts/dice'
-import {getMainContainer,getCounterDom} from './javascripts/dom'
+import {getMainContainer,getCounterDom,setCounterMarginTop} from './javascripts/dom'
 import {clickTossHandler} from './javascripts/handlers'
 import {getRand} from './javascripts/random'
 import {Game} from './javascripts/gameObjects'
@@ -31,8 +31,13 @@ function getTotalSum(currentGame) {
 
 (function initialRender()  {
     
-
-    game.renderObjects(9)
+    let howMany = 3;
+    if(howMany <= 9) {
+        setCounterMarginTop("55px")
+    } else {
+        setCounterMarginTop("0px")
+    }
+    game.renderObjects(howMany)
 
 })()
 
