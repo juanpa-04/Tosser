@@ -19,9 +19,9 @@ function getCounterDom() {
     return document.querySelector('.counter');
 }
 
-function setCounterMargin(margin) {
+function setCounterMarginTop(margin) {
 
-    const isMedia = window.matchMedia("(max-width:600px)");
+    const isMedia = window.matchMedia("(min-width:600px)");
     const counter = getCounterDom();
 
     
@@ -36,5 +36,5 @@ export {    clearParent,
             appendToParent,
             getMainContainer,
             getCounterDom,
-            setCounterMargin,
+            setCounterMarginTop,
        }
