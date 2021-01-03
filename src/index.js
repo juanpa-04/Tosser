@@ -32,9 +32,11 @@ function getTotalSum(currentGame) {
 (function initialRender()  {
     
     let howMany = 3;
-    if(howMany <= 9) {
-        setCounterMarginTop("55px")
+    if(howMany < 9) {
+        console.log("yes")
+        setCounterMarginTop("50px")
     } else {
+        console.log("yes")
         setCounterMarginTop("0px")
     }
     game.renderObjects(howMany)

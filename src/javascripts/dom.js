@@ -21,7 +21,7 @@ function getCounterDom() {
 
 function setCounterMarginTop(margin) {
 
-    const isMedia = window.matchMedia("(min-width:600px)");
+    const isMedia = window.matchMedia("(max-width:600px)");
     const counter = getCounterDom();
 
     
