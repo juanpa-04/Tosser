@@ -32,6 +32,23 @@ function setCounterMarginTop(margin) {
     return;
 }
 
+(function () {
+    const MAX_DICES = 9;
+    const parent = document.querySelector("#dices");
+
+    for (let i = 1; i <= MAX_DICES; i++) {
+        const option = document.createElement('option')
+        option.value = i
+        option.innerHTML = String(i)
+        appendToParent(parent,option)
+    }
+})()
+
+
+
+
+
+
 export {    clearParent,
             appendToParent,
             getMainContainer,
