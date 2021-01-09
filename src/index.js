@@ -1,4 +1,3 @@
-import {Dice} from './javascripts/dice'
 import {getMainContainer,getCounterDom,changeMargin} from './javascripts/dom'
 import {clickTossHandler,setNumberOfDicesHandler} from './javascripts/handlers'
 import {getRand,getTotal} from './javascripts/math'

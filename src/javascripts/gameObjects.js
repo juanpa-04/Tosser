@@ -1,6 +1,6 @@
 import {getMainContainer,appendToParent,clearParent} from './dom'
 import {Dice} from './dice'
-import {getRand} from './random'
+import {getRand} from './math'
 
 const Game = () => {
     let currentObjects = [];
