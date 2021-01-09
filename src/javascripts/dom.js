@@ -19,17 +19,18 @@ function getCounterDom() {
     return document.querySelector('.counter');
 }
 
-function setCounterMarginTop(margin) {
+function setMT(margin) {
 
     const isMedia = window.matchMedia("(max-width:600px)");
     const counter = getCounterDom();
-
-    
-    if(isMedia.matches) {
-        counter.style.marginTop = margin;
-    } 
-    
+    if(isMedia.matches) counter.style.marginTop = margin;
     return;
+}
+
+function changeMargin(number) {
+    (number < 9)
+    ? setMT("50px")
+    : setMT("0px")
 }
 
 (function () {
@@ -46,12 +47,9 @@ function setCounterMarginTop(margin) {
 
 
 
-
-
-
 export {    clearParent,
             appendToParent,
             getMainContainer,
             getCounterDom,
-            setCounterMarginTop,
+            changeMargin,
        }

@@ -1,11 +1,9 @@
 import {Dice} from './javascripts/dice'
-import {getMainContainer,getCounterDom,setCounterMarginTop} from './javascripts/dom'
+import {getMainContainer,getCounterDom,changeMargin} from './javascripts/dom'
 import {clickTossHandler,setNumberOfDicesHandler} from './javascripts/handlers'
 import {getRand} from './javascripts/random'
 import {Game} from './javascripts/gameObjects'
 import './styles/style.css'
-
-
 
 const container = getMainContainer();
 const select = document.querySelector("#dices")
@@ -14,7 +12,6 @@ container.onclick = clickTossHandler;
 select.onchange = setNumberOfDicesHandler;
 
 const game = Game();
-
 
 export function render() {
   
@@ -28,23 +25,12 @@ export function render() {
 }
 
 export function renderDices (number) {
-    changeMarginIfNeeded(number)
+    changeMargin(number)
     game.renderObjects(number)
 }
 
 function getTotalSum(currentGame) {
     return currentGame.reduce((sum,current)=>sum + current.getValue(),0);
-}
-
-function changeMarginIfNeeded(number) {
-
-    if(number < 9) {
-        console.log("yes")
-        setCounterMarginTop("50px")
-    } else {
-        console.log("yes")
-        setCounterMarginTop("0px")
-    }
 }
 
 (function initialRender()  {
