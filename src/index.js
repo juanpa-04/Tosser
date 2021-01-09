@@ -1,7 +1,7 @@
 import {Dice} from './javascripts/dice'
 import {getMainContainer,getCounterDom,changeMargin} from './javascripts/dom'
 import {clickTossHandler,setNumberOfDicesHandler} from './javascripts/handlers'
-import {getRand} from './javascripts/random'
+import {getRand,getTotal} from './javascripts/math'
 import {Game} from './javascripts/gameObjects'
 import './styles/style.css'
 
@@ -19,7 +19,7 @@ export function render() {
     const counterDom = getCounterDom();
     
     currentGame.forEach(die=>die.value(getRand(1,6)));
-    const sum = getTotalSum(currentGame);
+    const sum = getTotal(currentGame);
    
     counterDom.innerHTML = sum;
 }
@@ -27,10 +27,6 @@ export function render() {
 export function renderDices (number) {
     changeMargin(number)
     game.renderObjects(number)
-}
-
-function getTotalSum(currentGame) {
-    return currentGame.reduce((sum,current)=>sum + current.getValue(),0);
 }
 
 (function initialRender()  {
