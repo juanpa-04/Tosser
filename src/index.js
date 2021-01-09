@@ -1,4 +1,4 @@
-import {getMainContainer,getCounterDom,changeMargin} from './javascripts/dom'
+import {getMainContainer,getCounterDom,changeMargin,containerWidth} from './javascripts/dom'
 import {clickTossHandler,setNumberOfDicesHandler} from './javascripts/handlers'
 import {getRand,getTotal} from './javascripts/math'
 import {Game} from './javascripts/gameObjects'
@@ -25,6 +25,7 @@ export function render() {
 
 export function renderDices (number) {
     changeMargin(number)
+    containerWidth(number)
     game.renderObjects(number)
 }
 

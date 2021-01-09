@@ -31,9 +31,25 @@ function changeMargin(number) {
     (number < 9)
     ? setMT("50px")
     : setMT("0px")
-}
+} 
 
- 
+function containerWidth(number) {
+    const container = document.querySelector(".container")
+    
+    const DICE_WIDTH = 108;
+    let width = null;
+    console.log(number)
+    if(number == 1 || number == 2) {
+        width = (DICE_WIDTH*number).toString() + "px"
+        container.style.gridGap = "25px"
+    } else {
+        width = "450px"
+       
+    }
+    console.log(width)
+    container.style.maxWidth = width
+    return 
+}
 
 (function () {
     const MAX_DICES = 9;
@@ -54,4 +70,5 @@ export {    clearParent,
             getMainContainer,
             getCounterDom,
             changeMargin,
+            containerWidth,
        }

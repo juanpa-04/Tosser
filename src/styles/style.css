@@ -87,6 +87,7 @@ nav {
     font-family: Arial, Helvetica, sans-serif ;
     color:var(--counter-color);
     margin-top: 100px;
+  
     text-align: center;
     font-size: 10rem;
     width: 40%;
@@ -100,9 +101,7 @@ nav {
     height: 100vh;
 }
 
-.game-area {
-    flex-basis: 80%;
-}
+
 
 .side-menu {
    
@@ -120,6 +119,24 @@ nav {
     margin-top:15%;
 }
 
+#toss {
+    text-align: center;
+    font-size: 2rem;
+    color: cornsilk;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input {
+    margin-top:15px;
+    margin-bottom:10px;
+}
+
+label {
+    color:cornsilk;
+    font-size: 1.5rem;
+}
+
 @media (max-width:600px) {
     .container {
         width:100%;
@@ -131,11 +148,21 @@ nav {
     .wrapper {
         flex-direction: column;
     }
+
     
     .game-area{
         order:2;      
+        flex-shrink: 3;
     }
 
-   
+}
 
+@media (min-width:600px) {
+    .counter {
+        margin-bottom: 50px;
+    }
+
+    .game-area {
+        flex-basis: 80%;
+    }
 }
