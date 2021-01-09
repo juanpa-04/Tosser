@@ -18,7 +18,6 @@
 
 body {
     background-color: #eb5661fc;
-
     margin-top: auto;
     
 }
@@ -98,6 +97,7 @@ nav {
     display:flex;
     flex-direction: row;
     justify-content: center;
+    height: 100vh;
 }
 
 .game-area {
@@ -105,11 +105,19 @@ nav {
 }
 
 .side-menu {
+   
     flex-grow: 1;
-    background-color: aliceblue;
+    background-color: coral;
     padding: 20px;
-    display: block;
+    display: none;
+    transition: all 0.5s ease-in-out;
     
+}
+
+.side-container {
+    display: flex;
+    flex-direction: column;
+    margin-top:15%;
 }
 
 @media (max-width:600px) {
@@ -119,4 +127,15 @@ nav {
     .counter {
         margin-top: 0;
     }
+
+    .wrapper {
+        flex-direction: column;
+    }
+    
+    .game-area{
+        order:2;      
+    }
+
+   
+
 }

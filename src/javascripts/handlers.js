@@ -11,4 +11,17 @@ const setNumberOfDicesHandler = (event) => {
     console.log(event.target.value)
 }
 
+const sideBar = document.querySelector(".header")
+
+let current = false;
+sideBar.onclick = () => {
+    const sideMenu = document.querySelector(".side-menu");
+    current = !current;
+    console.log(current);
+    (current)? sideMenu.style.display = "block" :sideMenu.style.display = "none"
+
+}
+
+
+
 export {clickTossHandler,setNumberOfDicesHandler}

@@ -33,6 +33,8 @@ function changeMargin(number) {
     : setMT("0px")
 }
 
+ 
+
 (function () {
     const MAX_DICES = 9;
     const parent = document.querySelector("#dices");

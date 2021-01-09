@@ -29,7 +29,7 @@ export function renderDices (number) {
 }
 
 (function initialRender()  {
-    const INTIAL_VALUE = 9
+    const INTIAL_VALUE = 1
     renderDices(INTIAL_VALUE)
 
 })()
