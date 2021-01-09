@@ -6,30 +6,28 @@
     <title>Tosser</title>
 </head>
 <body>
-   
 
-        <div class="counter center">
-            -
-        </div>
-
-        <div class="header">
-            <nav class="toggle-side">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </nav>
-        </div>
-        
-    
-    
-        <div class="container center"></div>
-            
-       
+    <div class="header" data-toggle-id="side">
+        <nav class="toggle-side">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </nav>
     </div>
-    
-    <aside class="side-menu">
-        <select id="dices"></select>
-    </aside>
+   
+         <div class="wrapper">
+
+            <div class="game-area">
+                <div class="counter center"> - </div>
+                <div class="container center"></div>
+            </div>
+            
+            <aside class="side-menu" id="side">
+                <select id="dices"></select>
+            </aside>
+
+         </div>
+       
 
     <script src="./src/index.js"></script>
 </body>

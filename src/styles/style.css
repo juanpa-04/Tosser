@@ -42,15 +42,12 @@ nav {
    
     display:grid;
     gap:15px;
+    width:50%;
+    max-width: 500px;
     justify-items: center;
-    width: 50%;
-    max-width:500px;
     grid-template-columns: repeat(3,1fr)
 
 }
-
-
-
 
 .center {
     margin-left: auto;
@@ -97,6 +94,23 @@ nav {
 
 }
 
+.wrapper {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.game-area {
+    flex-basis: 80%;
+}
+
+.side-menu {
+    flex-grow: 1;
+    background-color: aliceblue;
+    padding: 20px;
+    display: block;
+    
+}
 
 @media (max-width:600px) {
     .container {
