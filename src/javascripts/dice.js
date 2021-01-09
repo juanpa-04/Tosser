@@ -36,6 +36,7 @@ function getDotPositions(number) {
         4:['a','b','f','g'],
         5:['a','b','d','f','g'],
         6:['a','b','c','e','f','g'],
+        
     }
     
     return diceFace[number]
