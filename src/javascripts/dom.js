@@ -19,6 +19,11 @@ function getCounterDom() {
     return document.querySelector('.counter');
 }
 
+function gameArea() {
+    return document.querySelector('.game-area')
+
+}
+
 function setMT(margin) {
 
     const isMedia = window.matchMedia("(max-width:600px)");
@@ -71,4 +76,5 @@ export {    clearParent,
             getCounterDom,
             changeMargin,
             containerWidth,
+            gameArea
        }
