@@ -1,7 +1,24 @@
 import {render,renderDices} from '../index'
+import {clearParent,gameArea} from './dom'
+import {Game} from './gameObjects'
+
+
+const diceRadio = document.querySelector("#dice")
+const coinRadio = document.querySelector("#coin")
+
+diceRadio.onclick= (event) => {
+    clearParent(gameArea())
+    const game = Game()
+    game.diceContainerDOM()
+    renderDices(1)
+}
+
+coinRadio.onclick = (event) => {
+    clearParent(gameArea())
+    console.log(coin)
+}
 
 const clickTossHandler = (event) => {
-    let target = event.target.closest('.dice');
     render()
 }
 
