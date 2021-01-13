@@ -7,6 +7,8 @@ function getTotal(currentGame) {
     return currentGame.reduce((sum,current)=>sum + current.getValue(),0);
 }
 
+/*
+
 function testRandom(tests) {
     const list = []
     for (let i = 0; i < tests;++i) {
@@ -40,7 +42,7 @@ function test() {
 
 }
 
-
+*/
 
 
 
