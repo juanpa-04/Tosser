@@ -1,20 +1,25 @@
+import {gameArea,appendToParent} from './dom'
+import colones from '../images/Colones.png'
+import colones2 from '../images/Colones2.png'
+
 let MAIN_BODY;
 let COIN_BODY;
 let COIN1;
 let COIN2;
-let headcount = 0;
-let tailcount = 0;
+let headcount = 0;let tailcount = 0;
 let animationCount = 0;
 let currentCoin = 0;
 
 
-function buildCoin() { //Esta funcion construye la moneda bb
+export function buildCoin() { //Esta funcion construye la moneda bb
     console.log("Building Coin!")
+    
     MAIN_BODY = document.createElement('div');
-    document.body.appendChild(MAIN_BODY);
+    //document.body.appendChild(MAIN_BODY);
     console.log("Main body built");
-    MAIN_BODY.setAttribute("id","main-block");
+    MAIN_BODY.setAttribute("class","main-block");
     console.log("Main body atribute set");
+    
 
     COIN_BODY = document.createElement('div');
     console.log("Coin body built");
@@ -23,22 +28,22 @@ function buildCoin() { //Esta funcion construye la moneda bb
 
     COIN2 = document.createElement('img');
     COIN2.setAttribute("id", "coin-image2");
-    COIN2.setAttribute("src", "./src/images/Colones2.png");
+    COIN2.setAttribute("src", colones2);
     COIN2.setAttribute("type", "png");
     COIN_BODY.appendChild(COIN2);
     console.log("Built Coin 2");
 
     COIN1 = document.createElement('img');
     COIN1.setAttribute("id", "coin-image");
-    COIN1.setAttribute("src", "./src/images/Colones.png");
+    COIN1.setAttribute("src", colones);
     COIN1.setAttribute("type", "png");
     COIN_BODY.appendChild(COIN1);
     console.log("Built Coin 1");
 
-
-    document.body.classList.add("bk-color");
+    
+    appendToParent(gameArea(),MAIN_BODY)
+   
 }
-
 
 
 function result() { //true = Heads, false = Tails
@@ -52,7 +57,12 @@ function result() { //true = Heads, false = Tails
     }
 } 
 
-function coin_flip() {
+export function resetAnimationCount() {
+    animationCount = 0
+}
+
+export function coin_flip() {
+    console.log(animationCount)
     if(animationCount == 0) {
         COIN1.classList.remove("TAILS1");
         COIN2.classList.remove("TAILS2");
@@ -73,9 +83,9 @@ function coin_flip() {
     }
 }
 
-function restartAnimation() {
+export function restartAnimation() {
     animationCount++;
-    console.log(animationCount);
+    console.log("RESTARTANIMATION",animationCount);
     if (animationCount >= 9) {
         console.log("Restarting");
         COIN_BODY.classList.remove("coinbkanimationhead");
@@ -93,7 +103,5 @@ function restartAnimation() {
     }
  
 }
-buildCoin()
-console.log(COIN_BODY);
-COIN_BODY.addEventListener('click', coin_flip);
-COIN_BODY.addEventListener('animationend', restartAnimation);
+
+

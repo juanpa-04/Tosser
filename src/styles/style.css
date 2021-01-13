@@ -1,8 +1,11 @@
 
+@import './coin.css';
+
 * {
     padding:0;
     margin:0;
     box-sizing: border-box;
+    touch-action: manipulation;
 }
 
 
@@ -41,11 +44,16 @@ nav {
    
     display:grid;
     gap:15px;
-    width:50%;
+    width:100%;
     max-width: 500px;
     justify-items: center;
     grid-template-columns: repeat(3,1fr)
 
+}
+
+.dice-game {
+   
+    width: 100%;
 }
 
 .center {

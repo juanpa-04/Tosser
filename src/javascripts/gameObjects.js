@@ -23,14 +23,17 @@ const Game = () => {
     const diceContainerDOM = () => {
         const counter = document.createElement('div')
         const container = document.createElement('div')
+        const game_dice = document.createElement('div')
 
         counter.className = "counter center"
         container.className = "container center"
+        game_dice.className = "dice-game"
 
         counter.innerHTML = "-"
 
         appendToParent(gameArea(),counter)
-        appendToParent(gameArea(),container)
+        appendToParent(game_dice,container)
+        appendToParent(gameArea(),game_dice)
 
     }
 
