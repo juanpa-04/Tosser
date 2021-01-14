@@ -144,7 +144,8 @@ input {
 label {
     margin: 20px;
     color:cornsilk;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    font-family: monospace, Arial, Helvetica, sans-serif;
 }
 
 @media (max-width:600px) {
@@ -179,7 +180,7 @@ label {
 
 #dices{
     margin: 15px;
-    font-family:fantasy, Arial, Helvetica, sans-serif;
+    font-family: monospace, Arial, Helvetica, sans-serif;
     color: brown;
     font-size: 20px;
     border: 3px solid brown;
@@ -189,7 +190,6 @@ label {
 }
 
 .game-choice{
-    font-family: fantasy, Arial, Helvetica, sans-serif;
     text-align: center;
     margin-top: 35px;
     margin-bottom: 25px;
@@ -197,12 +197,12 @@ label {
 
 #dice{
     margin:-10px;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
 }
 
 #coin{
    margin:-10px;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
 }
