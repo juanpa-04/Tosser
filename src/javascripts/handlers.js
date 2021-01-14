@@ -61,7 +61,7 @@ document.addEventListener('click',(event)=> {
     if(target === DICE_AROUND || target === DICE_BODY || target === DICE_GAPS) {
         clickTossHandler()
     }else if(target === COIN || targetID === TAILS || targetID === HEADS){
-        resetAnimationCount()
+        //resetAnimationCount()
         coin_flip()
     }
 })

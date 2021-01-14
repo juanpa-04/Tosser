@@ -39,6 +39,7 @@ export function buildCoin() { //Esta funcion construye la moneda bb
     COIN1.setAttribute("type", "png");
     COIN_BODY.appendChild(COIN1);
     console.log("Built Coin 1");
+    resetAnimationCount()
 
     
     appendToParent(gameArea(),MAIN_BODY)
@@ -59,6 +60,7 @@ function result() { //true = Heads, false = Tails
 
 export function resetAnimationCount() {
     animationCount = 0
+    console.log("Restarting Count");
 }
 
 export function coin_flip() {
