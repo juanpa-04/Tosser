@@ -128,8 +128,9 @@ nav {
 }
 
 #toss {
+    font-family: Lobster;
     text-align: center;
-    font-size: 2rem;
+    font-size: 4.5rem;
     color: cornsilk;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -141,8 +142,9 @@ input {
 }
 
 label {
+    margin: 20px;
     color:cornsilk;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
 }
 
 @media (max-width:600px) {
@@ -173,4 +175,34 @@ label {
     .game-area {
         flex-basis: 80%;
     }
+}
+
+#dices{
+    margin: 15px;
+    font-family:fantasy;
+    color: brown;
+    font-size: 20px;
+    border: 3px solid brown;
+    box-shadow: 0 0 20px brown;
+    border-radius: 5px;
+    border-style:solid;
+}
+
+.game-choice{
+    font-family: fantasy;
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 25px;
+}
+
+#dice{
+    margin:-10px;
+    width: 25px;
+    height: 25px;
+}
+
+#coin{
+   margin:-10px;
+    width: 25px;
+    height: 25px;
 }
