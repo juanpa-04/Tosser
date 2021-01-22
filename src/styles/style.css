@@ -175,6 +175,9 @@ label:hover {
         
     }
     
+    .side-menu {
+        max-height: 50vh;
+    }
 
 
   
@@ -193,6 +196,8 @@ label:hover {
     .main-block {
         margin-top: 30vh;
     }
+
+
 }
 
 #dices{
