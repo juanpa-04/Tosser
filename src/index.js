@@ -21,12 +21,13 @@ export function render() {
     const sum = getTotal(currentGame);
    
     counterDom.style.opacity= "0.5"
-    counterDom.innerHTML = "<br>"
-    setTimeout(renderCounter,100,counterDom,sum)
+   
+    setTimeout(renderCounter,150,counterDom,sum)
     
 }
 
 function renderCounter(dom,sum){
+
     dom.style.opacity= "1"
     return dom.innerHTML = sum
 }
