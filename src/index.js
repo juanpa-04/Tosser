@@ -20,7 +20,15 @@ export function render() {
     currentGame.forEach(die=>die.value(getRand(1,6)));
     const sum = getTotal(currentGame);
    
-    counterDom.innerHTML = sum;
+    counterDom.style.opacity= "0.5"
+    counterDom.innerHTML = "<br>"
+    setTimeout(renderCounter,100,counterDom,sum)
+    
+}
+
+function renderCounter(dom,sum){
+    dom.style.opacity= "1"
+    return dom.innerHTML = sum
 }
 
 export function renderDices (number) {

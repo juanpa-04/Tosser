@@ -52,10 +52,12 @@ function createDice() {
 
 function changeFace(dice,number,type) {
     clearParent(dice);
-    type(number,dice);
+    type(number,dice)
+    
 }
 
 function createDotFace(number,parent) {
+    console.log("jsdhfdkjahs")
     const positions = getDotPositions(number);
 
     positions.forEach((pos) => {
