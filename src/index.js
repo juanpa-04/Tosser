@@ -1,9 +1,14 @@
-import {getCounterDom,changeMargin,containerWidth} from './javascripts/dom'
+import {getMainContainer,getCounterDom,changeMargin,containerWidth} from './javascripts/dom'
+import {clickTossHandler,setNumberOfDicesHandler} from './javascripts/handlers'
 import {getRand,getTotal} from './javascripts/math'
 import {Game} from './javascripts/gameObjects'
 import './styles/style.css'
 
+const container = getMainContainer();
+const select = document.querySelector("#dices")
 
+container.onclick = clickTossHandler;
+select.onchange = setNumberOfDicesHandler;
 
 const game = Game();
 
