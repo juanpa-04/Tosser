@@ -6,10 +6,12 @@ import {Game} from './gameObjects'
 
 const diceRadio = document.querySelector("#dice")
 const coinRadio = document.querySelector("#coin")
+const menu = document.querySelector(".side-menu");
 
 diceRadio.onclick= () => {
     clearParent(gameArea())
     document.body.style.backgroundColor = "#eb5661fc";
+    menu.style.backgroundColor = "coral";
     document.querySelector("#dices").style.display = "block"
     const game = Game()
     game.diceContainerDOM()
@@ -23,6 +25,7 @@ coinRadio.onclick = () => {
     clearParent(gameArea())
     document.body.style.backgroundColor = "cornflowerblue";
     document.querySelector("#dices").style.display = "none"
+    menu.style.backgroundColor = "#edbc64";
     buildCoin()
 }
 

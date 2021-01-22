@@ -117,7 +117,7 @@ nav {
     background-color: coral;
     padding: 20px;
     display: none;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.05s ease-in-out;
     
 }
 
