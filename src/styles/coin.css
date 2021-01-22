@@ -20,7 +20,7 @@
     box-shadow: 8px 7px 30px -7px black;
     border: solid;
     border-color: transparent;
-    border-right-width: 0px;
+    border-width: 0.3px;
 
 }
 
