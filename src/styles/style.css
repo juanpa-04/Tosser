@@ -172,8 +172,12 @@ label:hover {
     
     .game-area{
         order:2;      
-        flex-shrink: 3;
+        
     }
+    
+
+
+  
 
 }
 
@@ -184,6 +188,10 @@ label:hover {
 
     .game-area {
         flex-basis: 80%;
+    }
+
+    .main-block {
+        margin-top: 30vh;
     }
 }
 

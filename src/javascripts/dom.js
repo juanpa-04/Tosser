@@ -34,7 +34,7 @@ function setMT(margin) {
 
 function changeMargin(number) {
     (number < 9)
-    ? setMT("50px")
+    ? setMT("0px")
     : setMT("0px")
 } 
 
