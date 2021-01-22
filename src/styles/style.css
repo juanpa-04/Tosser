@@ -175,11 +175,10 @@ label:hover {
         
     }
     
-    .side-menu {
-        max-height: 50vh;
+    .main-block {
+        margin-bottom: 25vh;
+        margin-top: 15vh;
     }
-
-
   
 
 }

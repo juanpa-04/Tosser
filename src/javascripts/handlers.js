@@ -20,6 +20,12 @@ diceRadio.onclick= () => {
 }
 
 
+/*
+
+ margin-bottom: 25vh;
+        margin-top: 10vh;
+        */
+
 
 coinRadio.onclick = () => {
     clearParent(gameArea())
