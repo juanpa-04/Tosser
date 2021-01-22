@@ -9,6 +9,8 @@ const coinRadio = document.querySelector("#coin")
 const menu = document.querySelector(".side-menu");
 
 diceRadio.onclick= () => {
+
+    document.querySelector("#dices").selectedIndex = "0" //Resets select dropdown
     clearParent(gameArea())
     document.body.style.backgroundColor = "#eb5661fc";
     menu.style.backgroundColor = "coral";
