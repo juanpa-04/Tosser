@@ -141,11 +141,20 @@ input {
     margin-bottom:10px;
 }
 
+input[type=radio] {
+    display: none;
+}
+
 label {
     margin: 20px;
     color:cornsilk;
     font-size: 2rem;
     font-family: monospace, Arial, Helvetica, sans-serif;
+}
+
+label:hover {
+    color:rgb(231, 224, 196);
+    font-size: 2.1rem;
 }
 
 @media (max-width:600px) {
