@@ -57,7 +57,7 @@ function changeFace(dice,number,type) {
 }
 
 function createDotFace(number,parent) {
-    console.log("jsdhfdkjahs")
+    
     const positions = getDotPositions(number);
 
     positions.forEach((pos) => {

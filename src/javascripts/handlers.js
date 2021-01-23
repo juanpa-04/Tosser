@@ -38,7 +38,7 @@ const clickTossHandler = (event) => {
 const setNumberOfDicesHandler = (event) => {
     const numberOfDices = event.target.value;
     renderDices(numberOfDices)
-    console.log(event.target.value)
+    
 }
 
 const sideBar = document.querySelector(".header")
@@ -51,7 +51,7 @@ let current = false;
 sideBar.onclick = () => {
     const sideMenu = document.querySelector(".side-menu");
     current = !current;
-    console.log(current);
+    
     (current)? sideMenu.style.display = "block" :sideMenu.style.display = "none"
 
 }
@@ -62,7 +62,7 @@ document.addEventListener('click',(event)=> {
     const target = event.target.className
     const targetID = event.target.id
 
-    console.log(event.target)
+   
     if(target === DICE_AROUND || target === DICE_BODY || target === DICE_GAPS) {
         clickTossHandler()
     }else if(target === COIN || targetID === TAILS || targetID === HEADS){

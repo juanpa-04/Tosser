@@ -43,7 +43,7 @@ function containerWidth(number) {
     
     const DICE_WIDTH = 108;
     let width = null;
-    console.log(number)
+   
     if(number == 1 || number == 2) {
         width = (DICE_WIDTH*number).toString() + "px"
         container.style.gridGap = "25px"
@@ -51,7 +51,7 @@ function containerWidth(number) {
         width = "450px"
        
     }
-    console.log(width)
+   
     container.style.maxWidth = width
     return 
 }

@@ -8,7 +8,7 @@ const Game = () => {
     const renderObjects = (number) => {
         clearParent(getMainContainer())
         currentObjects = []
-        console.log(getMainContainer(),"!")
+       
         for (let i = 0; i < number; i++) {
             const newDice = Dice(getRand(1,6))
             appendToParent(getMainContainer(),newDice.DOM)
